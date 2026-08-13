@@ -1,0 +1,27 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#g1)"/>
+  <rect width="800" height="450" fill="#0b0b12" fill-opacity="0.55"/>
+  <circle cx="120" cy="90" r="150" fill="#ffffff" opacity="0.05"/>
+  <circle cx="700" cy="380" r="180" fill="#ffffff" opacity="0.05"/>
+  <rect x="60" y="150" width="680" height="150" rx="18" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.15"/>
+  <!-- needle/thread icon -->
+  <g transform="translate(120,175)" stroke="#fde68a" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M0 90 L80 10" />
+    <circle cx="86" cy="4" r="7" fill="#fde68a" stroke="none"/>
+    <path d="M0 90 Q 30 60 10 40 Q -10 20 20 15" stroke="#f472b6"/>
+  </g>
+  <text x="240" y="205" font-family="Verdana, sans-serif" font-size="34" font-weight="bold" fill="#ffffff">Silai ERP</text>
+  <text x="240" y="240" font-family="Verdana, sans-serif" font-size="18" fill="#fde68a">Tailor Business Management System</text>
+  <text x="240" y="270" font-family="Verdana, sans-serif" font-size="14" fill="#e5e7eb">Orders • Inventory • Billing • Customers</text>
+</svg>

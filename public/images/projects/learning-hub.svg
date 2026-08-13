@@ -1,0 +1,26 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="50%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="glass3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#g3)"/>
+  <rect width="800" height="450" fill="#0b0b12" fill-opacity="0.55"/>
+  <circle cx="130" cy="100" r="150" fill="#ffffff" opacity="0.05"/>
+  <circle cx="680" cy="370" r="170" fill="#ffffff" opacity="0.05"/>
+  <rect x="60" y="150" width="680" height="150" rx="18" fill="url(#glass3)" stroke="#ffffff" stroke-opacity="0.15"/>
+  <!-- open book icon -->
+  <g transform="translate(110,180)" fill="none" stroke="#a7f3d0" stroke-width="5" stroke-linejoin="round">
+    <path d="M0 10 C 25 -5 45 -5 60 10 L 60 80 C 45 65 25 65 0 80 Z"/>
+    <path d="M120 10 C 95 -5 75 -5 60 10 L 60 80 C 75 65 95 65 120 80 Z"/>
+  </g>
+  <text x="270" y="205" font-family="Verdana, sans-serif" font-size="34" font-weight="bold" fill="#ffffff">The Learning Hub</text>
+  <text x="270" y="240" font-family="Verdana, sans-serif" font-size="18" fill="#a7f3d0">Online Learning Platform</text>
+  <text x="270" y="270" font-family="Verdana, sans-serif" font-size="14" fill="#e5e7eb">Courses • Progress Tracking • Auth</text>
+</svg>
