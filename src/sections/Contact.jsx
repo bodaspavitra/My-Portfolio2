@@ -50,7 +50,19 @@ export const Contact = () => {
 
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 mt-16">
           {/* Form */}
-          <div className="xl:col-span-5">
+          <div className="xl:col-span-5 flex flex-col gap-6">
+            <div className={`rounded-3xl p-6 sm:p-8 flex flex-col gap-3 ${t.cardBg}`}>
+              <p className={`text-sm ${t.mutedText}`}>
+                📧 <a href="mailto:bodaspavitra@email.com" className="hover:text-amber-400 underline transition-colors">bodaspavitra@email.com</a>
+              </p>
+              <p className={`text-sm ${t.mutedText}`}>
+                📞 <a href="tel:+917284905992" className="hover:text-amber-400 underline transition-colors">+91-7284905992</a>
+              </p>
+              <p className={`text-sm ${t.mutedText}`}>
+                📍 Vadodara, Gujarat, India
+              </p>
+            </div>
+
             <div className={`rounded-3xl p-6 sm:p-10 relative z-[2] ${t.cardBg}`}>
               <form
                 ref={formRef}

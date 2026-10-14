@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Graphic Design Hero</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1200px;
+      height: 700px;
+      background: radial-gradient(circle at 50% 30%, #1a162b 0%, #0d0a17 60%, #05040a 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 40px 50px;
+    }
+    .grid-bg {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-size: 30px 30px;
+      pointer-events: none;
+    }
+    .glow-1 {
+      position: absolute;
+      top: -100px;
+      left: 10%;
+      width: 450px;
+      height: 450px;
+      background: rgba(139, 92, 246, 0.25);
+      border-radius: 50%;
+      filter: blur(140px);
+    }
+    .glow-2 {
+      position: absolute;
+      bottom: -100px;
+      right: 10%;
+      width: 400px;
+      height: 400px;
+      background: rgba(16, 185, 129, 0.2);
+      border-radius: 50%;
+      filter: blur(140px);
+    }
+    .header {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #a855f7, #6366f1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 18px;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+    }
+    .title-group h1 {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .title-group p {
+      font-size: 11px;
+      font-family: monospace;
+      color: #c084fc;
+      letter-spacing: 1px;
+    }
+    .meta-pills {
+      display: flex;
+      gap: 10px;
+    }
+    .meta-pill {
+      font-size: 11px;
+      font-family: monospace;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .content-stage {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex: 1;
+      padding: 20px 0;
+    }
+    .card {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      background: #120e20;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+      transition: all 0.3s ease;
+    }
+    .card-left {
+      width: 260px;
+      height: 380px;
+      transform: rotate(-4deg) translateY(10px);
+    }
+    .card-center {
+      width: 480px;
+      height: 410px;
+      z-index: 20;
+      border-color: rgba(168, 85, 247, 0.5);
+      box-shadow: 0 30px 80px rgba(168, 85, 247, 0.25), 0 0 60px rgba(0, 0, 0, 0.9);
+      display: flex;
+      flex-direction: column;
+    }
+    .card-right {
+      width: 260px;
+      height: 380px;
+      transform: rotate(4deg) translateY(10px);
+    }
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .center-top {
+      height: 250px;
+      overflow: hidden;
+    }
+    .center-bottom {
+      height: 160px;
+      background: #171328;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 10px 20px;
+    }
+    .center-logo-box {
+      width: 190px;
+      height: 100px;
+      background: #fff;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+    .center-logo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .footer {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 16px;
+      font-size: 12px;
+      font-family: monospace;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .footer-highlight {
+      color: #a855f7;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <div class="glow-1"></div>
+  <div class="glow-2"></div>
+
+  <div class="header">
+    <div class="brand">
+      <div class="badge">GD</div>
+      <div class="title-group">
+        <h1>Graphic Design &amp; Visual Identity</h1>
+        <p>● BRANDING · PACKAGING · INFOGRAPHICS · SOCIAL</p>
+      </div>
+    </div>
+    <div class="meta-pills">
+      <span class="meta-pill">21 ASSETS CATALOGED</span>
+      <span class="meta-pill">4 CREATIVE DISCIPLINES</span>
+      <span class="meta-pill">PRINT &amp; DIGITAL</span>
+    </div>
+  </div>
+
+  <div class="content-stage">
+    <!-- Left Card: Industrial Infographic -->
+    <div class="card card-left">
+      <img src="coenz-five-protectors.jpg" alt="Industrial Infographic">
+    </div>
+
+    <!-- Center Card: Core Composition -->
+    <div class="card card-center">
+      <div class="center-top">
+        <img src="packaging-sri-priya-hing.png" alt="FMCG Packaging">
+      </div>
+      <div class="center-bottom">
+        <div class="center-logo-box">
+          <img src="logo-authenti-india.png" alt="AuthentiIndia Logo">
+        </div>
+        <div class="center-logo-box" style="background: #141416;">
+          <img src="logo-fowlix.jpg" alt="Fowlix Logo" style="border-radius: 8px;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Card: Metaphor Iceberg -->
+    <div class="card card-right">
+      <img src="coenz-iceberg-operations.jpg" alt="Process Safety Iceberg">
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>COENZ GROUP · AUTHENTIINDIA · MOONBYTE · SRI PRIYA MASALA</div>
+    <div><span class="footer-highlight">COMMERCIAL VISUAL COMMUNICATION</span> · 2026 ARCHIVE</div>
+  </div>
+</body>
+</html>

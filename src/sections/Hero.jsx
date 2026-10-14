@@ -66,10 +66,10 @@ export const Hero = () => {
                             <h1>that Deliver Results</h1>
                         </div>
                         <p className={`md:text-xl relative z-10 pointer-events-none ${t.pageText}`}>
-                            Hi, I'm <span className="text-3xl text-amber-500 font-bold">Vidhi</span>,{' '}
+                            Hi, I'm <span className="text-3xl text-amber-500 font-bold">Pavitra</span>,{' '}
                             <span className='md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-pink-500 to-cyan-400'>
                                 <Typewriter
-                                    words={['Programmer', 'Social Media Post Creator', 'Mern Stack Developer', 'UI Enthusiast', 'Analyst']}
+                                    words={['UI/UX Designer', 'Product Designer', 'Design System Architect', 'Fintech UI Creator', 'Figma Specialist']}
                                     loop={0} // 0 means infinite loop
                                     cursor
                                     cursorStyle='|'
@@ -82,8 +82,8 @@ export const Hero = () => {
                         <div className='flex flex-col sm:flex-row gap-4'>
                             <Button className="md:w-80 md:h-16 w-60 h-12" id="button" text="See my Journey" />
                             <a
-                                href="/Mochi_Vidhi_Complete_CV2.pdf"
-                                download
+                                href="/Pavitra's Resume.pdf"
+                                download="Pavitra_Bodas_Resume.pdf"
                                 className=" md:w-80 md:h-16 w-60 h-12 cta-wrapper"
                             >
                                 <div className='cta-button group'>
@@ -111,8 +111,8 @@ export const Hero = () => {
                     >
                         <div className="relative w-70 h-70 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-fuchsia-400/60 shadow-[0_0_40px_rgba(217,70,239,0.4)] hover:shadow-[0_0_60px_rgba(217,70,239,0.7)] transition-all duration-500 ease-in-out">
                             <img
-                                src="/images/vidhi.jpg"
-                                alt="Vidhi Chauhan"
+                                src="/images/pavitra_profile.jpg"
+                                alt="Pavitra Bodas"
                                 className="object-cover object-center w-full h-full hover:scale-105 transition-transform duration-500"
                             />
                         </div>

@@ -388,11 +388,11 @@ export const IntroLoader = () => {
                     </p>
 
                     <h1 className="bg-gradient-to-r from-cyan-300 via-purple-400 to-fuchsia-400 bg-clip-text text-4xl font-bold text-transparent sm:text-5xl md:text-6xl">
-                        Welcome to Vidhi's World
+                        Welcome to Pavitra's World
                     </h1>
 
                     <p className="mt-4 text-sm tracking-[0.3em] text-white/40">
-                        CREATIVE DEVELOPER
+                        UI/UX & PRODUCT DESIGNER
                     </p>
 
                     {/* Loading */}

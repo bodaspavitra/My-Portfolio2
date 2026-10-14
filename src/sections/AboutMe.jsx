@@ -30,7 +30,7 @@ export const AboutMe = () => {
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-3xl overflow-hidden border-2 border-fuchsia-400/40 shadow-[0_0_50px_-10px_rgba(217,70,239,0.45)] hover:shadow-[0_0_70px_-10px_rgba(217,70,239,0.65)] transition-all duration-500 ease-in-out">
                 <img
                   src="/images/vidhi3d.jpg"
-                  alt="Vidhi cartoon"
+                  alt="Pavitra Bodas UI/UX Designer"
                   className="object-cover object-center w-full h-full hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -41,20 +41,17 @@ export const AboutMe = () => {
         {/* Right: Content card */}
         <div className={`w-full rounded-3xl p-8 md:p-10 space-y-5 leading-8 text-base md:text-lg ${t.cardBg} ${t.cardHover} transition-all duration-500`}>
           <p className={t.mutedText}>
-            My name is <span className={`font-semibold ${t.pageText}`}>Mochi Vidhi</span>. I'm currently pursuing my{' '}
-            <span className={`font-semibold ${t.pageText}`}>B.Tech in Information Technology</span> from{' '}
-            <span className={`font-semibold ${t.pageText}`}>CVM University</span>, and I bring real project &amp; internship
-            experience alongside my academics.
+            My name is <span className={`font-semibold ${t.pageText}`}>Pavitra Bodas</span>. I am a{' '}
+            <span className={`font-semibold ${t.pageText}`}>Junior UI/UX Designer at Moonbyte</span> based in Vadodara, Gujarat. I hold a{' '}
+            <span className={`font-semibold ${t.pageText}`}>Bachelor of Engineering in Computer Engineering (CGPA: 8.23)</span> from{' '}
+            <span className={`font-semibold ${t.pageText}`}>Vadodara Institute of Engineering (GTU)</span>.
           </p>
           <p className={t.mutedText}>
-            I've worked as a <span className={`font-semibold ${t.pageText}`}>React.js Developer Intern</span> and now
-            contribute as a <span className={`font-semibold ${t.pageText}`}>part-time developer on an HRMS product</span>,
-            which has sharpened how I build real, usable software — not just projects for practice.
+            I specialize in designing mobile and web products across <span className={`font-semibold ${t.pageText}`}>fintech, verification, and service platforms</span>.
+            My toolkit includes creating seamless user flows, wireframes, high-fidelity interactive interfaces, and scalable design systems using <span className={`font-semibold ${t.pageText}`}>Figma</span>.
           </p>
           <p className={t.mutedText}>
-            I'm open to <span className={`font-semibold ${t.pageText}`}>challenges</span> and{' '}
-            <span className={`font-semibold ${t.pageText}`}>quick to learn</span>. I look forward to becoming a strong
-            team player and building impactful digital products.
+            My main focus is on crafting <span className={`font-semibold ${t.pageText}`}>simple, intuitive, and human-centered experiences</span> for complex product workflows that turn user needs into impactful digital solutions.
           </p>
         </div>
       </div>

@@ -26,7 +26,7 @@ export const NavBar = () => {
           className={`text-lg md:text-xl font-bold tracking-tight ${t.pageText} transition-transform duration-300 hover:scale-105`}
           href="#hero"
         >
-          Vidhi<span className="text-fuchsia-400"> . </span>Mochi
+          Pavitra<span className="text-fuchsia-400"> . </span>Bodas
         </a>
 
         <nav className='hidden lg:flex items-center'>

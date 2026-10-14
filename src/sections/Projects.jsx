@@ -3,21 +3,29 @@ import { projects } from "../constants";
 import { useTheme } from "../context/ThemeContext";
 import { SectionHeading } from "../components/SectionHeading";
 
-export const Project = () => {
+export const Project = ({ onSelectProject }) => {
   const { t } = useTheme();
 
   const [activeFilter, setActiveFilter] = useState("ALL");
   const [hoveredProject, setHoveredProject] = useState(null);
 
-  const filters = ["ALL", "FULL STACK", "AI", "TOOLS"];
+  const handleOpenProject = (slug) => {
+    if (onSelectProject) {
+      onSelectProject(slug);
+    } else {
+      window.location.hash = `#/project/${slug}`;
+    }
+  };
+
+  const filters = ["ALL", "FINTECH", "B2B SAAS", "E-COMMERCE", "BRANDING", "GRAPHIC DESIGN", "MOBILE APP"];
 
   const filteredProjects = useMemo(() => {
     if (activeFilter === "ALL") {
       return projects;
     }
 
-    return projects.filter(
-      (project) => project.category === activeFilter
+    return projects.filter((project) =>
+      project.category.toUpperCase().includes(activeFilter)
     );
   }, [activeFilter]);
 
@@ -98,8 +106,10 @@ export const Project = () => {
                 {/* ================= IMAGE ================= */}
 
                 <div
+                  onClick={() => handleOpenProject(project.slug)}
                   className={`
                     relative
+                    cursor-pointer
                     overflow-hidden
                     rounded-2xl
                     border
@@ -228,35 +238,38 @@ export const Project = () => {
                       }
                     `}
                   >
-
                     <span className="text-xs uppercase tracking-[0.2em] text-white/70">
-                      Explore Project
+                      Case Study
                     </span>
 
-                    {project.link && (
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="
-                          flex
-                          h-11
-                          w-11
-                          items-center
-                          justify-center
-                          rounded-full
-                          bg-white
-                          text-black
-                          transition-transform
-                          duration-300
-                          hover:scale-110
-                        "
-                        aria-label={`View ${project.title}`}
-                      >
-                        <span className="text-lg"> ↗ </span>
-                      </a>
-                    )}
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleOpenProject(project.slug);
+                      }}
+                      className="
+                        flex
+                        items-center
+                        gap-2
+                        rounded-full
+                        bg-white
+                        px-4
+                        py-2.5
+                        text-xs
+                        font-bold
+                        text-black
+                        transition-all
+                        duration-300
+                        hover:scale-105
+                        hover:bg-cyan-400
+                        shadow-lg
+                      "
+                      aria-label={`View ${project.title} Case Study`}
+                    >
+                      <span>Read Case Study</span>
+                      <span className="text-sm">→</span>
+                    </button>
                   </div>
                 </div>
 
@@ -271,7 +284,9 @@ export const Project = () => {
 
                   {/* Title */}
                   <h3
+                    onClick={() => handleOpenProject(project.slug)}
                     className={`
+                      cursor-pointer
                       text-2xl
                       font-bold
                       tracking-tight
@@ -322,28 +337,25 @@ export const Project = () => {
                   </div>
 
                   {/* Mobile Project Link */}
-                  {project.link && (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="
-                        mt-5
-                        inline-flex
-                        items-center
-                        gap-2
-                        text-xs
-                        font-semibold
-                        uppercase
-                        tracking-[0.15em]
-                        text-cyan-400
-                        md:hidden
-                      "
-                    >
-                      View Project
-                      <span>→</span>
-                    </a>
-                  )}
+                  <button
+                    type="button"
+                    onClick={() => handleOpenProject(project.slug)}
+                    className="
+                      mt-5
+                      inline-flex
+                      items-center
+                      gap-2
+                      text-xs
+                      font-semibold
+                      uppercase
+                      tracking-[0.15em]
+                      text-cyan-400
+                      md:hidden
+                    "
+                  >
+                    View Case Study
+                    <span>→</span>
+                  </button>
 
                 </div>
               </article>
@@ -381,12 +393,11 @@ export const Project = () => {
               ${t.mutedText}
             `}
           >
-            Explore more of my projects, experiments and
-            development work on GitHub.
+            Explore more of my design projects, user flows and case studies on LinkedIn.
           </p>
 
           <a
-            href="https://github.com/mochi-vidhi"
+            href="https://linkedin.com/in/pavitra-bodas-157517307/"
             target="_blank"
             rel="noopener noreferrer"
             className="
@@ -409,7 +420,7 @@ export const Project = () => {
               dark:text-black
             "
           >
-            View GitHub
+            Connect on LinkedIn
             <span>↗</span>
           </a>
 

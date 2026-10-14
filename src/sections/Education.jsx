@@ -4,28 +4,17 @@ import { SectionHeading } from "../components/SectionHeading";
 
 export const Education = () => {
   const { t } = useTheme();
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const educationList = [
     {
       number: "01",
-      year: "2022",
-      title: "12th Grade",
-      school: "N.K High School",
-      board: "GSEB",
-      duration: "Completed in 2022",
-      score: "66.66%",
-      label: "Higher Secondary",
-      icon: "📚",
-    },
-    {
-      number: "02",
       year: "2026",
-      title: "B.Tech in IT",
-      school: "CVM University",
-      board: "Information Technology",
+      title: "B.E. in Computer Engineering",
+      school: "Vadodara Institute of Engineering",
+      board: "Gujarat Technological University (GTU)",
       duration: "2022 — 2026",
-      score: "9.10 CGPA",
+      score: "8.23 CGPA",
       label: "Bachelor's Degree",
       icon: "🎓",
     },
